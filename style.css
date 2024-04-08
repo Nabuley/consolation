@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: #f6f8da;
+}
+
+.checklist-container {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checklist-item {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+
+.checklist-item input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.checklist-item:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checklist-item input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checklist-item input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checklist-item .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 7px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+button{
+    background-color:#2196F3;
+    color:white;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #e94560;
+}
+
+button:active {
+    background-color: #202020;
+}
